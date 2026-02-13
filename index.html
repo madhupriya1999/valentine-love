@@ -13,7 +13,7 @@
             text-align: center;
             color: white;
             overflow-x: hidden;
-            background: url('public/images/bg.jpg') no-repeat center center fixed;
+            background: url('images/bg.jpg') no-repeat center center fixed;
             background-size: cover;
         }
 
@@ -135,7 +135,7 @@
             <!-- Photo Slideshow -->
             <div class="card">
                 <h3>Our Memories 📸</h3>
-                <img id="slideshow" src="public/images/1.jpg" alt="Memory Photo">
+                <img id="slideshow" src="images/1.jpg" alt="Memory Photo">
             </div>
 
             <!-- Love Question -->
@@ -188,7 +188,7 @@
         });
 
         // Slideshow
-        const photos = ["public/images/2.jpg", "public/images/4.jpg", "public/images/5.jpg", "public/images/6.jpg"];
+        const photos = ["images/2.jpg", "images/4.jpg", "images/5.jpg", "images/6.jpg"];
         let photoIndex = 0;
         setInterval(() => {
             photoIndex = (photoIndex + 1) % photos.length;
@@ -207,4 +207,3 @@
     </script>
 </body>
 </html>
-
