@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For My Love ❤️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .container {
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        .heart {
+            font-size: 60px;
+            animation: beat 1s infinite;
+        }
+
+        @keyframes beat {
+            0%,100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+
+        .card {
+            background: white;
+            color: #444;
+            padding: 25px;
+            border-radius: 20px;
+            margin: 25px auto;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            position: relative;
+        }
+
+        .yes {
+            background: #ff4b7d;
+            color: white;
+        }
+
+        .no {
+            background: #999;
+            color: white;
+            position: absolute;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Happy Valentine’s Day ❤️</h1>
+    <div class="heart">💖</div>
+
+    <div class="card">
+        <h3>Will You Love Me Forever? 😌</h3>
+
+        <button class="yes" onclick="sayYes()">YES 💕</button>
+        <button class="no" id="noBtn">NO 😏</button>
+
+        <div id="result">
+            I knew it 😌💖  
+            Forever yours, <b>Madhu ❤️</b>
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+// YES button
+function sayYes() {
+    document.getElementById("result").style.display = "block";
+}
+
+// NO button run away
+const noBtn = document.getElementById("noBtn");
+
+noBtn.addEventListener("mouseover", function() {
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 100);
+
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+});
+
+</script>
+
+</body>
+</html>
